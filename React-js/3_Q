@@ -1,0 +1,31 @@
+Explain the difference between npm and npx using the create-react-app code example
+npm (Node Package Manager) is the default package manager for Node.js. 
+It is used to install and manage packages for your project.
+
+npx is a command-line tool that is part of npm, and it allows you to execute packages without having to install them globally. This makes it more convenient to use packages that are only needed for a specific task.
+Create-React-App example:
+
+
+Install Create React App globally using npm:
+
+bash
+
+Verify
+Open In Editor
+Edit
+Copy code
+
+npm install -g create-react-app
+Use npx to create a new React application:
+
+bash
+
+Verify
+
+Open In Editor
+Edit
+
+Copy code
+npx create-react-app my-app
+
+In this example, npx executes the create-react-app package to create a new React project without having to install it globally. This is because npx will automatically download and install the package in the current project directory, making it available only for this project.

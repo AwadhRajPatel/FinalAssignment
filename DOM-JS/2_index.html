@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Delegation Example</title>
+  </head>
+  <body>
+    <ul id="itemList">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    <button id="addItemBtn">Add New Item</button>
+    <script src="2_dom.js"></script>
+  </body>
+</html>
+
+<!-- 
+What is Event Delegation?
+ Event delegation is a technique in JavaScript where you leverage the event bubbling mechanism to handle events at a higher
+ level in the DOM rather than assigning individual event listeners to each target element. By attaching a single event 
+ listener to a parent element, you can manage events for multiple child elements, even those added dynamically after 
+ the event listener was attached.
+
+How Does Event Delegation Work?
+
+ When an event occurs on an element, it first triggers handlers on that element, and then (due to event bubbling) the
+ event propagates up through its ancestors. Event delegation takes advantage of this bubbling process. Instead of 
+ adding an event listener to each individual element, you add one to a common ancestor that listens for events on
+  its descendants.
+
+  Benefits of Event Delegation
+
+   1.Performance Improvement: Reduces the number of event listeners, which can improve performance, especially when dealing with a large number of elements.
+   2.Simplified Code: Makes your code cleaner and easier to manage by reducing duplication.
+   3.Dynamic Elements Handling: Allows you to handle events on elements that are added to the DOM dynamically after the initial page load.
+-->

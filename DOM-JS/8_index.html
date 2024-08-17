@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Shopping List</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    .list-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+    .delete-button {
+      padding: 5px 10px;
+      background-color: #f44336;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Shopping List</h1>
+  <div>
+    <input type="text" id="itemInput" placeholder="Enter item">
+    <button onclick="addItem()">Add Item</button>
+  </div>
+  <ul id="shoppingList"></ul>
+
+  <script>
+    const shoppingList = document.getElementById('shoppingList');
+    const itemInput = document.getElementById('itemInput');
+
+    function addItem() {
+      const item = itemInput.value.trim();
+      if (item !== '') {
+        const listItem = document.createElement('li');
+        listItem.classList.add('list-item');
+        listItem.innerHTML = `
+          <span>${item}</span>
+          <button class="delete-button" onclick="deleteItem(this)">Delete</button>
+        `;
+        shoppingList.appendChild(listItem);
+        itemInput.value = '';
+        itemInput.focus();
+      }
+    }
+
+    function deleteItem(button) {
+      const listItem = button.parentElement;
+      shoppingList.removeChild(listItem);
+    }
+  </script>
+</body>
+</html>

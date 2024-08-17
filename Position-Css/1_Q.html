@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  width: 50px;
+  height: 50px;
+  background-color: aquamarine;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 50px;
+  position: absolute;
+}
+
+#A {
+  left: 200px;
+  top: 200px;
+}
+
+#B {
+  top: calc(200px - 15px - 30px);
+  left: calc(200px - 15px - 30px);
+}
+
+#C {
+  top: calc(200px - 15px - 30px);
+  left: calc(200px + 15px + 30px);
+}
+
+#D {
+  top: calc(200px + 15px + 30px);
+  left: calc(200px - 15px - 30px);
+}
+
+#E {
+  top: calc(200px + 15px + 30px);
+  left: calc(200px + 15px + 30px);
+}
+</style>
+</head>
+<body>
+
+<div id="A">A</div>
+<div id="B">B</div>
+<div id="C">C</div>
+<div id="D">D</div>
+<div id="E">E</div>
+
+</body>
+</html>

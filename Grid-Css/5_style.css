@@ -1,0 +1,17 @@
+.grid-container-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center; /* Centers all items within the grid container horizontally */
+  }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  
+  .justify-self-center {
+    justify-self: center; /* Centers Item 3 horizontally within its grid cell */
+  }

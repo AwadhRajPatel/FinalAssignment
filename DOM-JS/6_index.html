@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .carousel-container {
+            width: 500px;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .carousel-slide {
+            width: 100%;
+            height: 300px;
+            display: none;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-nav {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+
+        .carousel-nav button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="carousel-container">
+        <div class="carousel-slide" id="slide1">
+            <img src="https://thumbs.dreamstime.com/b/relaxed-happy-young-woman-cooling-down-ventilator-home-summer-heat-relaxed-happy-young-woman-cooling-down-ventilator-318049703.jpg?w=768" alt="Image 1">
+        </div>
+        <div class="carousel-slide" id="slide2">
+            <img src="https://thumbs.dreamstime.com/b/relaxed-happy-young-woman-cooling-down-ventilator-home-summer-heat-relaxed-happy-young-woman-cooling-down-ventilator-318049703.jpg?w=768" alt="Image 2">
+        </div>
+        <div class="carousel-slide" id="slide3">
+            <img src="data:image/jpeg;base64,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" alt="Image 3">
+        </div>
+
+        <div class="carousel-nav">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll(".carousel-slide");
+        const prevBtn = document.getElementById("prev");
+        const nextBtn = document.getElementById("next");
+
+        let currentSlide = 0;
+
+        function showSlide(n) {
+            slides[currentSlide].style.display = "none";
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].style.display = "block";
+        }
+
+        prevBtn.addEventListener("click", () => showSlide(currentSlide - 1));
+        nextBtn.addEventListener("click", () => showSlide(currentSlide + 1));
+
+        showSlide(currentSlide); // Show the first slide initially
+    </script>
+
+</body>
+</html>

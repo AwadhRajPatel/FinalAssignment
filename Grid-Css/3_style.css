@@ -1,0 +1,11 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
+    grid-auto-rows: minmax(100px, auto); /* Set minimum row height to 100px, but allow rows to grow if needed */
+  }
+  
+  .item {
+    background-color: lightblue;
+    padding: 20px;
+    border: 1px solid gray;
+  }

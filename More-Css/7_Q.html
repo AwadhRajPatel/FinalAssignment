@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PW Skills</title>
+    <style>
+      .card {
+        width: 300px;
+        height: 300px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: opacity 0.3s ease-in-out;
+        opacity: 0.8;
+        margin: 20px auto;
+        position: relative;
+      }
+
+      .card:hover {
+        opacity: 1;
+      }
+
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .card h2 {
+        font-size: 20px;
+        margin-top: 10px;
+        padding: 0 20px;
+      }
+
+      .card p {
+        font-size: 14px;
+        margin-top: 5px;
+        padding: 0 20px;
+      }
+
+      .card .course-name {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 5px;
+        padding: 0 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="card">
+      <img
+        src="data:image/webp;base64,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"
+        alt="Web Development"
+      />
+      <h2>WEB DEVELOPMENT</h2>
+      <p>
+        Learn the fundamentals of web development and build your own websites.
+      </p>
+      <p class="course-name">Course Name: PW Skills web development</p>
+    </div>
+  </body>
+</html>
